@@ -5,6 +5,15 @@ services:
     build: .
     image: client.birthday-calendar.image
     container_name: client.birthday-calendar.container
-    ports:
-      - '8080:80'
     restart: always
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:

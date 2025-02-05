@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  client.birthday-calendar:
+    build: ./
+    image: client.birthday-calendar.image
+    container_name: client.birthday-calendar.container
+    ports:
+      - '8080:80'
+    restart: always
+
+    networks:
+      - birthday-calendar-client-network
+
+networks:
+  birthday-calendar-client-network:
+    name: birthday-calendar-client-network
+    driver: bridge

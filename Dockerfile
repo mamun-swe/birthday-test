@@ -37,5 +37,5 @@ RUN npm run build
 
 # Stage 2: Serve with Caddy
 FROM caddy:2.7
-COPY --from=builder /app/dist /usr/share/caddy
+COPY --from=builder /app/build /usr/share/caddy
 # COPY Caddyfile /etc/caddy/Caddyfile

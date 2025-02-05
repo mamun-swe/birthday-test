@@ -1,4 +1,4 @@
-:80 {
+birthdayapp-test.itrtechsystems.com {
     root * /usr/share/caddy
     file_server
 }
